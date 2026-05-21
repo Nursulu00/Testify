@@ -15,3 +15,11 @@ export async function checkFraudText(text: string) {
 
   return await response.json();
 }
+
+const apiUrl = process.env.EXPO_PUBLIC_API_URL;
+
+export async function fetchSomething() {
+  const response = await fetch(`${apiUrl}/endpoint`);
+  const data = await response.json();
+  return data;
+}
